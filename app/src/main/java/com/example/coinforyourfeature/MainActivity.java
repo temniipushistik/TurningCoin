@@ -16,7 +16,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends FragmentActivity{
+public class MainActivity extends FragmentActivity {
 
 
     @Override
@@ -25,31 +25,21 @@ public class MainActivity extends FragmentActivity{
         setContentView(R.layout.activity_main);
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-        transaction.add(R.id.fragment_container,FragmentMotionless.newInstance(),"tag1");
+        transaction.add(R.id.fragment_container, FragmentMotionless.newInstance());
         transaction.commit();
 
         (findViewById(R.id.button_turn)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
-
-                transaction.add(R.id.fragment_container, TurningFragment.newInstance(), "tag2");
+                transaction.add(R.id.fragment_container, GoingToStopFragment.newInstance());
                 transaction.commit();
+
+
             }
 
 
         });
-
-
-
-    }
-
-
-  public void change(View view) {
-        Fragment fragment;
-        fragment = new TurningFragment();
-
 
 
     }

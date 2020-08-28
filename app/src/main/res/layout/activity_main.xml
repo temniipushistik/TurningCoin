@@ -13,14 +13,15 @@
 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="change"
         android:text="turn it" />
 
-    <fragment
+    <FrameLayout
         android:id="@+id/fragment_container"
         class="com.example.coinforyourfeature.FragmentMotionless"
         android:layout_width="match_parent"
-        android:layout_height="685dp" />
+        android:layout_height="685dp"
+        tools:layout="@layout/motionless_fragment"/>
+
 
 
 </LinearLayout>
